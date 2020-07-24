@@ -47,7 +47,7 @@ describe('parseError test', () => {
     expect(errLog.stack[3].filename).to.equal("http://192.168.31.8:8000/a.js");
 
     expect(errLog.stack[4].line).to.equal(22);
-    expect(errLog.stack[4].column).to.equal(4);
+    expect(errLog.stack[4].column).to.equal(3);
     expect(errLog.stack[4].filename).to.equal("http://192.168.31.8:8000/a.js");
   });
 
