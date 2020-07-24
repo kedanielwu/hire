@@ -23,6 +23,14 @@ describe('parseError test', () => {
     expect(errLog.message).to.equal('test');
   });
 
+  it('should have no stack trace if no valid input', () => {
+    const err = new Error('test');
+    err.stack = 'whatever'
+    const errLog = parseError(err);
+    expect(errLog.message).to.equal('test');
+    expect(errLog.stack.length).to.equal(0);
+  });
+
   it('should parse correctly for chrome stack', () => {
     const err = new Error('test');
     err.stack = fixtureStack;
@@ -75,5 +83,7 @@ describe('parseError test', () => {
     expect(errLog.stack[3].filename).to.equal("http://192.168.31.8:8000/a.js");
 
   });
+
+
 
 });
