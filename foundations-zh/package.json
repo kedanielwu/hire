@@ -11,10 +11,12 @@
     "test": "cross-env TS_NODE_FILES=true mocha -r ts-node/register src/__test__/*.test.ts",
     "lint": "eslint ."
   },
-  "pre-commit": [
-    "test",
-    "lint"
-  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test",
+      "pre-push": "npm run lint && npm test"
+    }
+  },
   "devDependencies": {
     "@types/chai": "^4.2.11",
     "@types/mocha": "^8.0.0",
@@ -24,12 +26,13 @@
     "chai": "^4.2.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.5.0",
+    "husky": "^4.2.5",
     "mocha": "^8.0.1",
     "shx": "^0.3.2",
     "ts-node": "^8.10.2",
-    "typescript": "^3.6.2",
-    "pre-commit": "^1.2.2"
+    "typescript": "^3.6.2"
   },
+
   "dependencies": {
     "tslib": "^1.10.0"
   }
