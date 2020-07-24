@@ -16,9 +16,9 @@ const PATTERNS = [
 
 
 export function parseError(err: Error): ErrorMessage {
-  const parsedErrorLog = {
+  const parsedErrorLog: ErrorMessage = {
     message: err.message,
-    stack: [] as any
+    stack: []
   }
   if (err.stack) {
     err.stack.split('\n').forEach((row) => {
