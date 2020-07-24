@@ -14,13 +14,13 @@ jobs:
       with:
         node-version: 12.x
     - name: npm install
-      working-directory: ./foundation-zh
+      working-directory: ./foundations-zh
       run: npm install
     - name: test
-      working-directory: ./foundation-zh
+      working-directory: ./foundations-zh
       run: npm test
     - name: linter
-      working-directory: ./foundation-zh
+      working-directory: ./foundations-zh
       run: npm run lint
     env:
       CI: true
