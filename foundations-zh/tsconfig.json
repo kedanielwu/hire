@@ -2,11 +2,12 @@
   "compilerOptions": {
     "strict": true,
     "moduleResolution": "node",
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es2020",
+    "module": "commonjs",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "importHelpers": true,
+    "sourceMap": true,
     "noEmitHelpers": true
   }
 }
