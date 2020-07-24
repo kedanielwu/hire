@@ -27,10 +27,10 @@
     "mocha": "^8.0.1",
     "shx": "^0.3.2",
     "ts-node": "^8.10.2",
-    "typescript": "^3.6.2"
+    "typescript": "^3.6.2",
+    "pre-commit": "^1.2.2"
   },
   "dependencies": {
-    "pre-commit": "^1.2.2",
     "tslib": "^1.10.0"
   }
 }
