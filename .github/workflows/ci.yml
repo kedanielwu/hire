@@ -9,6 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - run: cd foundations-zh
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
