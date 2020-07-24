@@ -9,13 +9,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: cd foundations-zh
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - run: npm install
-    - run: npm run lint
-    - run: npm test
-      env:
-        CI: true
+    - name: npm install
+      working-directory: ./foundation-zh
+      run: npm install
+    - name: test
+      working-directory: ./foundation-zh
+      run: npm test
+    - name: linter
+      working-directory: ./foundation-zh
+      run: npm run lint
+    env:
+      CI: true
